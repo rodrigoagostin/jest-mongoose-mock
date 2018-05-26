@@ -1,0 +1,31 @@
+{
+    "name": "jest-mongoose-mock",
+    "version": "1.0.0",
+    "description": "Simple mocks for mongoose models to use with jest",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/austinoboyle/jest-mongoose-mock.git"
+    },
+    "keywords": [
+        "mongoose",
+        "mock",
+        "jest",
+        "stub",
+        "test",
+        "mocking",
+        "model"
+    ],
+    "author": "Austin O'Boyle",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/austinoboyle/jest-mongoose-mock/issues"
+    },
+    "homepage": "https://github.com/austinoboyle/jest-mongoose-mock#readme",
+    "peerDependencies": {
+        "jest": "^23.0.0"
+    }
+}
