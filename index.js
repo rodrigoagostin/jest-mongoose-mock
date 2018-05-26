@@ -1,4 +1,4 @@
-const MODEL_METHODS = require("methods");
+const MODEL_METHODS = require("./methods");
 
 let mockModel = {};
 
