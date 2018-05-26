@@ -1,6 +1,6 @@
 {
     "name": "jest-mongoose-mock",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Simple mocks for mongoose models to use with jest",
     "main": "index.js",
     "scripts": {
