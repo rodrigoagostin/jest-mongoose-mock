@@ -25,7 +25,8 @@
         "url": "https://github.com/austinoboyle/jest-mongoose-mock/issues"
     },
     "homepage": "https://github.com/austinoboyle/jest-mongoose-mock#readme",
-    "peerDependencies": {
-        "jest": "^23.0.0"
+    "devDependencies": {
+        "jest": "^23.0.0",
+        "mongoose": "^5.1.2"
     }
 }
