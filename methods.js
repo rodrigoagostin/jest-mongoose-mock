@@ -8,7 +8,8 @@ const MODEL_METHODS = [
     "deleteOne",
     "discriminator",
     "distinct",
-    " ensureIndexes",
+    "ensureIndexes",
+    "exec",
     "find",
     "findById",
     "findByIdAndDelete",
@@ -22,7 +23,8 @@ const MODEL_METHODS = [
     "replaceOne",
     "update",
     "updateMany",
-    "updateOne"
+    "updateOne",
+    "where"
 ];
 
 module.exports = MODEL_METHODS;
