@@ -1,6 +1,7 @@
 const MODEL_METHODS = [
     "aggregate",
     "bulkWrite",
+    "catch",
     "count",
     "create",
     "createIndexes",
@@ -21,6 +22,7 @@ const MODEL_METHODS = [
     "findOneAndUpdate",
     "remove",
     "replaceOne",
+    "then",
     "update",
     "updateMany",
     "updateOne",

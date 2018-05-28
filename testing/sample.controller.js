@@ -7,3 +7,14 @@ exports.sampleAction = (req, res) => {
 
     res.json();
 };
+
+exports.sampleWithPromise = (req, res) => {
+    Sample.findOne()
+        .exec()
+        .then(result => {
+            console.log("result");
+        })
+        .catch(e => {
+            console.log("ERROR");
+        });
+};
