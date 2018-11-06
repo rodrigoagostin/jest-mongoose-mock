@@ -22,7 +22,6 @@ const MODEL_METHODS = [
     "findOneAndUpdate",
     "remove",
     "replaceOne",
-    "then",
     "update",
     "updateMany",
     "updateOne",
