@@ -26,7 +26,14 @@ const MODEL_METHODS = [
     "update",
     "updateMany",
     "updateOne",
-    "where"
+    "where",
+    "select",
+    "populate",
+    "sort",
+    "limit",
+    "lt",
+    "gt",
+    "in"
 ];
 
 module.exports = MODEL_METHODS;
