@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+    - latest
+cache:
+    directories:
+        - node_modules
+branches:
+    only:
+        - /.*/
+script: yarn test --all --coverage
