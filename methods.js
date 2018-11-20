@@ -22,11 +22,17 @@ const MODEL_METHODS = [
     "findOneAndUpdate",
     "remove",
     "replaceOne",
-    "then",
     "update",
     "updateMany",
     "updateOne",
-    "where"
+    "where",
+    "select",
+    "populate",
+    "sort",
+    "limit",
+    "lt",
+    "gt",
+    "in"
 ];
 
 module.exports = MODEL_METHODS;
