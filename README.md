@@ -1,4 +1,4 @@
-# jest-mongoose-mock
+# jest-mongoose-mock &middot; [![Build Status](https://travis-ci.com/austinoboyle/jest-mongoose-mock.svg?branch=master)](https://travis-ci.com/austinoboyle/jest-mongoose-mock)
 Simple mongoose model mocks for jest unit tests
 
 ### Sample usage
