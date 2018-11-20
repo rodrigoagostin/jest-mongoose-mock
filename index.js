@@ -35,7 +35,9 @@ class MockModel {
             });
 
             this.then = jest.fn(cb => {
-                return Promise.resolve(cb(this.queryResult));
+                if (cb) {
+                    return Promise.resolve(cb(this.queryResult));
+                }
             });
 
             this.exec = jest.fn(cb => {
@@ -43,7 +45,7 @@ class MockModel {
                 // being used as a Promise, so we return the Mocked model to be
                 // used in .then and .catch
                 if (cb) {
-                    cb(err, this.queryResult);
+                    return Promise.resolve(cb(this.queryResult));
                 }
 
                 return this;

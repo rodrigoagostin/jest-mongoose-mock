@@ -1,20 +1,20 @@
 const Sample = require("./sample.model");
 
-exports.sampleAction = (req, res) => {
+exports.findOne = (req, res) => {
     Sample.findOne()
-        .where()
-        .exec();
-
-    res.json();
+        .where(req.body)
+        .then(result => res.json(result));
 };
 
-exports.sampleWithPromise = (req, res) => {
+exports.chainActions = (req, res) => {
     Sample.findOne()
+        .where()
         .exec()
-        .then(result => {
-            console.log("result");
-        })
-        .catch(e => {
-            console.log("ERROR");
-        });
+        .then(result => res.json(result));
+};
+
+exports.find = (req, res) => {
+    Sample.find(req.body)
+        .exec()
+        .then(result => res.json(result));
 };
