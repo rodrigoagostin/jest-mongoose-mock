@@ -32,7 +32,8 @@ const MODEL_METHODS = [
     "limit",
     "lt",
     "gt",
-    "in"
+    "in",
+    "lean"
 ];
 
 module.exports = MODEL_METHODS;

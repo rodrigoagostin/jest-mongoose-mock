@@ -27,11 +27,24 @@ describe("Model Unit Tests", () => {
             .where()
             .exec()
             .then();
-        const methods = ["findOne", "where", "exec", "then"];
+        const methods = ["findOne", "where", "exec"];
         for (let method of methods) {
             expect(model[method].mock.calls.length).toBe(1);
         }
     });
+
+    it("Allows chaining of commands with lean", () => {
+        model
+            .findOne()
+            .where()
+            .exec()
+            .lean();
+        const methods = ["findOne", "where", "lean"];
+        for (let method of methods) {
+            expect(model[method].mock.calls.length).toBe(1);
+        }
+    });
+
     it("Passes data to to find, findOne, and then callbacks", () => {
         const mockData = [{ id: 1 }];
         model._setMockData(mockData);
