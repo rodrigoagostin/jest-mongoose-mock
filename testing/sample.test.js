@@ -32,6 +32,18 @@ describe("Model Unit Tests", () => {
             expect(model[method].mock.calls.length).toBe(1);
         }
     });
+
+    it("Allows chaining of commands with lean", () => {
+        model
+            .findOne()
+            .where()
+            .lean();
+        const methods = ["findOne", "where", "lean"];
+        for (let method of methods) {
+            expect(model[method].mock.calls.length).toBe(1);
+        }
+    });
+
     it("Passes data to to find, findOne, and then callbacks", () => {
         const mockData = [{ id: 1 }];
         model._setMockData(mockData);
@@ -127,6 +139,27 @@ describe("Model Unit Tests", () => {
         expect(model.dbRows).toEqual(["test"]);
         model._clearMockData();
         expect(model.dbRows).toEqual([]);
+    });
+
+    it("find mechanism with lean works", () => {
+        const model = new MockModel();
+
+        model._setMockData([
+            {
+                id: 1,
+                name: "hello"
+            },
+            {
+                id: 3,
+                name: "Test"
+            }
+        ]);
+
+        model.find({}).lean(result => {
+            expect(result.length).toEqual(2);
+            expect(result[0].id).toEqual(1);
+            expect(result[1].name).toEqual("Test");
+        });
     });
 });
 

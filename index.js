@@ -40,6 +40,12 @@ class MockModel {
                 }
             });
 
+            this.lean = jest.fn(cb => {
+                if (cb) {
+                    return Promise.resolve(cb(this.queryResult));
+                }
+            })
+
             this.exec = jest.fn(cb => {
                 // If a callback is supplied to exec, call it, otherwise it is
                 // being used as a Promise, so we return the Mocked model to be
